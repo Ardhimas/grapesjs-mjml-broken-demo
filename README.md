@@ -1,8 +1,8 @@
-# Ant Design Pro
+# grapesjs-mjml issue demo
 
-This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
+This project outlines an issue where the grapesjs editor works in dev but not in prod.
 
-## Environment Prepare
+## Initialize
 
 Install `node_modules`:
 
@@ -16,42 +16,26 @@ or
 yarn
 ```
 
-## Provided Scripts
+## Scripts
 
-Ant Design Pro provides some useful script to help you quick start and build with web project, code style check and test.
-
-Scripts provided in `package.json`. It's safe to modify or add additional script:
-
-### Start project
+### Start project in dev
 
 ```bash
-npm start
+yarn start
 ```
+Navigate to `localhost:3003/builder` if it doesn't do so automatically, and you'll see:
+![image](https://user-images.githubusercontent.com/5238654/69081855-7e19fa00-0a04-11ea-9286-305bafd3d7eb.png)
+The builder is able to load and you are able to use it, there is a warning in the console for the `mjml` tag being unrecognized as a DOM element but it doesn't cause any issues.
 
-### Build project
+
+### Build and deploy prod build to local web server
 
 ```bash
-npm run build
+yarn serve
 ```
-
-### Check code style
-
-```bash
-npm run lint
-```
-
-You can also use script to auto fix some lint error:
-
-```bash
-npm run lint:fix
-```
-
-### Test code
-
-```bash
-npm test
-```
+This time, you'll see:
+![image](https://user-images.githubusercontent.com/5238654/69082034-e963cc00-0a04-11ea-8622-8217bcfab5ba.png)
 
 ## More
 
-You can view full document on our [official website](https://pro.ant.design). And welcome any feedback in our [github](https://github.com/ant-design/ant-design-pro).
+You can view full documentation on this framework on the [official website](https://pro.ant.design).

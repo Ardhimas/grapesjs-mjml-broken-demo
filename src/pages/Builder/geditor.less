@@ -1,0 +1,133 @@
+:global {
+  #mjml-editor {
+    padding-bottom: 20px;
+    background-color: #242A3B;
+  }
+
+  .mjml-editor-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    background-color: #242A3B;
+  }
+
+  .mjml-editor-column {
+    min-height: 75px;
+    flex-grow: 1;
+    flex-basis: 100%;
+    overflow: auto;
+  }
+
+  .mjml-editor-clm {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gjs-pn-panel {
+    position: relative;
+  }
+
+  .gjs-blocks-c {
+    justify-content: center;
+  }
+
+  .gjs-block {
+    font-size: 5px;
+    justify-content: center;
+    min-height: auto;
+  }
+
+  .gjs-block.fa {
+    font-size: 1.2em;
+    height: 50px;
+    padding: 0;
+  }
+
+  .gjs-cv-canvas {
+    width: 100%;
+    height: 100%;
+    top: 0;
+  }
+
+  .gjs-blocks-cs {
+    // border: 1px solid rgba(0,0,0,0.3);
+    border-top: none;
+  }
+  /* Theming */
+  .gjs-one-bg {
+    background-color: #242A3B;
+    // background-color: #fff;
+  }
+
+  .gjs-two-color {
+    color: #9ca8bb;
+  }
+
+  .gjs-three-bg {
+    background-color: #1E8FE1;
+    color: white;
+  }
+
+  .gjs-four-color,
+  .gjs-four-color-h:hover {
+    color: #1E8FE1;
+  }
+
+  #gjs {
+    border: 3px solid #444;
+  }
+
+  /* Reset some default styling */
+  .gjs-cv-canvas {
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .panel__top {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    position: initial;
+    justify-content: center;
+    justify-content: space-between;
+  }
+  .panel__basic-actions {
+    position: initial;
+  }
+
+  #picker-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .panel__switcher {
+    position: initial;
+  }
+
+  .editor-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    /* height: 300px; */
+  }
+
+  .editor-canvas {
+    flex-grow: 1;
+  }
+
+  .panel__right {
+    flex-basis: 230px;
+    position: relative;
+    // overflow-y: auto;
+    overflow: scroll;
+  }
+
+  .panel__devices {
+    position: initial;
+  }
+}
