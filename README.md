@@ -21,20 +21,20 @@ yarn
 ### Start project in dev
 
 ```bash
-npm start
+yarn start
 ```
+Navigate to `localhost:3003/builder` if it doesn't do so automatically, and you'll see:
+![image](https://user-images.githubusercontent.com/5238654/69081855-7e19fa00-0a04-11ea-9286-305bafd3d7eb.png)
+The builder is able to load and you are able to use it, there is a warning in the console for the `mjml` tag being unrecognized as a DOM element but it doesn't cause any issues.
 
-### Build project
-
-```bash
-npm run build
-```
 
 ### Build and deploy prod build to local web server
 
 ```bash
-npm run serve
+yarn serve
 ```
+This time, you'll see:
+![image](https://user-images.githubusercontent.com/5238654/69082034-e963cc00-0a04-11ea-8622-8217bcfab5ba.png)
 
 ## More
 
