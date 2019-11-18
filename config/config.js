@@ -7,22 +7,6 @@ const { pwa, primaryColor } = defaultSettings; // preview.pro.ant.design only do
 const {
   ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION,
   REACT_APP_API_URL,
-  REACT_APP_PATIENT_URL,
-  REACT_APP_SITE_URL,
-  REACT_APP_AIRBRAKE_ID,
-  REACT_APP_AIRBRAKE_KEY,
-  REACT_APP_DEPLOY_ENV,
-  REACT_APP_AUTH_TTL,
-  REACT_APP_AUTH_CLIENT_ID,
-  REACT_APP_AUTH_URL,
-  REACT_APP_OAUTH2_ISSUER_URL,
-  REACT_APP_OAUTH2_AUDIENCE,
-  REACT_APP_OAUTH2_SCOPES,
-  REACT_APP_LOGIN_URL,
-  REACT_APP_WHITELISTED_ROLES,
-  BUCKET_NAME,
-  REACT_APP_ZENDESK_ACCOUNT_KEY,
-  REACT_APP_WALKME_URL,
 } = process.env;
 const isAntDesignProPreview = ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION === 'site';
 const plugins = [
@@ -96,57 +80,14 @@ export default {
   // umi routes: https://umijs.org/zh/guide/router.html
   routes: [
     {
-      path: '/user',
-      component: '../layouts/UserLayout',
-      routes: [
-        {
-          name: 'login',
-          path: '/user/login',
-          component: './user/login',
-        },
-      ],
+      path: '/',
+      redirect: '/builder',
     },
     {
-      path: '/',
-      component: '../layouts/SecurityLayout',
-      routes: [
-        {
-          path: '/',
-          component: '../layouts/BasicLayout',
-          // authority: ['admin', 'user'],
-          routes: [
-            {
-              path: '/',
-              redirect: '/builder',
-            },
-            {
-              path: '/welcome',
-              name: 'welcome',
-              icon: 'smile',
-              component: './Welcome',
-            },
-            {
-              path: '/builder',
-              name: 'builder',
-              icon: 'smile',
-              component: './builder',
-            },
-            {
-              path: '/admin',
-              name: 'admin',
-              icon: 'crown',
-              component: './Admin',
-              authority: ['admin'],
-            },
-            {
-              component: './404',
-            },
-          ],
-        },
-        {
-          component: './404',
-        },
-      ],
+      path: '/builder',
+      name: 'builder',
+      // icon: 'smile',
+      component: './builder',
     },
     {
       component: './404',
@@ -160,22 +101,6 @@ export default {
     ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION:
       ANT_DESIGN_PRO_ONLY_DO_NOT_USE_IN_YOUR_PRODUCTION || '', // preview.pro.ant.design only do not use in your production ; preview.pro.ant.design 专用环境变量，请不要在你的项目中使用它。
     REACT_APP_API_URL,
-    REACT_APP_PATIENT_URL,
-    REACT_APP_SITE_URL,
-    REACT_APP_AIRBRAKE_ID,
-    REACT_APP_AIRBRAKE_KEY,
-    REACT_APP_DEPLOY_ENV,
-    REACT_APP_AUTH_TTL,
-    REACT_APP_AUTH_CLIENT_ID,
-    REACT_APP_AUTH_URL,
-    REACT_APP_OAUTH2_ISSUER_URL,
-    REACT_APP_OAUTH2_AUDIENCE,
-    REACT_APP_OAUTH2_SCOPES,
-    REACT_APP_LOGIN_URL,
-    REACT_APP_WHITELISTED_ROLES,
-    REACT_APP_ZENDESK_ACCOUNT_KEY,
-    REACT_APP_WALKME_URL,
-    BUCKET_NAME,
   },
   ignoreMomentLocale: true,
   lessLoaderOptions: {

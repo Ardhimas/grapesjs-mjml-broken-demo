@@ -26,8 +26,8 @@ const defaults = {
   storageManager: {
     id: '', // 'gjs-',             // Prefix identifier that will be used on parameters
     type: 'remote', // Type of the storage
-    autosave: true, // Store data automatically
-    autoload: true, // Autoload stored data on init
+    // autosave: true, // Store data automatically
+    // autoload: true, // Autoload stored data on init
     stepsBeforeSave: 1, // If autosave enabled, indicates how many changes are necessary before store method is triggered
     contentTypeJson: true,
     credentials: 'same-origin',

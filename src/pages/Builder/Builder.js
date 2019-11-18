@@ -40,7 +40,10 @@ function Builder(props) {
           </div>
           <div className="editor-row">
             <div className="editor-canvas">
-              <div id="gjs" style={{ overflow: 'hidden', height: '100%' }}>
+              <div
+                id="gjs"
+                style={{ overflow: 'hidden', height: '100%' }}
+              >
                 <mjml>
                   <mj-body></mj-body>
                 </mjml>

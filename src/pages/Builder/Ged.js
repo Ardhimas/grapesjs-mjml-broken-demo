@@ -6,15 +6,7 @@ import defaults from './defaults';
 
 class Ged {
   constructor(id) {
-    const accessToken = localStorage.getItem('KeetAuthClient.accessToken')
     const config = _.defaultsDeep({
-      storageManager: {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-        urlStore: `${REACT_APP_API_URL}/api/email_templates/${id}/builder_store`,
-        urlLoad: `${REACT_APP_API_URL}/api/email_templates/${id}/builder_load`,
-      },
       richTextEditor: {
         actions: this.getActions(),
       },
